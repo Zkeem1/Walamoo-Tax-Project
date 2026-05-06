@@ -35,7 +35,7 @@
 - Generate reports in standard text format and Digital Frequency Language (DFL)
 - Track user login/logout activity for audit purposes
 
-This project was developed as a **group assignment** for COMP3435 User-Interface Design at Fanshawe College, emphasizing **user-centered design principles**, **accessibility compliance**, and **intuitive interaction models**.
+This project was developed an **assignment** for COMP3435 User-Interface Design at The University of the West Indies, emphasizing **user-centered design principles**, **accessibility compliance**, and **intuitive interaction models**.
 
 ---
 
