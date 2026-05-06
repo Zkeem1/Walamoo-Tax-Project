@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Interface</title>
+    <link rel="stylesheet" href="registration.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="registration-form1.jpg" alt="Image">
+        </div>
+        <div class="form-container">
+            <h2>Registration Form</h2>
+
+            <form id="registrationForm" action="#">
+                <div class="user-details">
+                    <form id="registrationForm" action="#">
+                        <div class="user-details">
+                          
+                            <div class="input-box">
+                                <span class="details">First Name:</span>
+                                <input type="text" placeholder="Enter First Name" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Last Name:</span>
+                                <input type="text" placeholder="Enter Last Name" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Date-of-Birth:</span>
+                                <input type="date" placeholder="Enter Date-of-Birth" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Email Address:</span>
+                                <input type="text" id="email" placeholder="Enter Email Address" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Country:</span>
+                                <input type="text" placeholder="Enter Country" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">City:</span>
+                                <input type="text" placeholder="Enter City" required>
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">Username:</span>
+                                <input type="text" id="username" placeholder="Enter Username" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Password:</span>
+                                <input type="password" id="password" placeholder="Enter Password" required>
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">Registration Number:</span>
+                                <input type="number" placeholder="Enter Registration Number" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Tax Identification Number:</span>
+                                <input type="number" placeholder="Enter Tax Identification Number" required>
+                            </div>
+        
+                            <div class="button-container">
+                                <div class="button">
+                                <input type="submit" value="Register">
+                                
+                            </div>
+                            </div>
+        <div class="links">
+            <a href="login.html">Back to Login</a>
+        </div>      
+            </form>
+
+            <div id="thankYouMessage" class="popup-message">
+                <p>Thank you for registering!</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Function to handle form submission
+        document.getElementById("registrationForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get username and password entered by the user
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var email = document.getElementById("email").value;
+
+            // Store username and password in localStorage
+            localStorage.setItem("username", username);
+            localStorage.setItem("password", password);
+            localStorage.setItem("email", email);
+
+            // Show the "Thank you for registering!" message
+            document.getElementById("thankYouMessage").style.display = "block";
+        });
+    </script>
+</body>
+
+</html>

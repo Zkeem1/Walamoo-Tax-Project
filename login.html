@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Walamoo Tax System</title>
+    <!--Including external stylesheet-->
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+
+    <!--<div class="container"> -->
+        <!-- Login Form -->
+        <form id="loginForm">
+
+            <div class="user-icon">
+                <img src="icon2.png" alt="User Icon">
+            </div>
+
+            <h2>Welcome</h2>
+            
+            <!--Display Error Message if any -->
+            <p id="errorMessage" class="error" style="display: none;"></p>
+          
+            <!--Username Input-->
+            <label>Username</label>
+            <input type="text" id="username" placeholder="Username" required><br>
+
+            <!--Password Input-->
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Password" required><br>
+
+            <!--Submit Button-->
+            <button type="button" onclick="login()">Login</button>
+            
+            <div class="links">
+                <a href="customizelogin.html">Settings</a>
+                <a href="forgot_password.html">Forgot Password?</a>
+            </div>
+
+            <div class="register-link">
+                <p>Do not have an account? <a href="registration.html">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Track login attempts
+        var loginAttempts = 0;
+
+        function login() {
+            // Increment login attempts
+            loginAttempts++;
+
+            // Get username and password entered by the user
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Check if both fields are empty
+            if (username.trim() === "" && password.trim() === "") {
+                // Display pop-up message asking the user to enter both username and password
+                alert("Please enter a username and password.");
+                return; // Exit function
+            }
+
+            // Check if username and password are not empty
+            if (username.trim() === "" || password.trim() === "") {
+                // Display error message if username or password is empty
+                document.getElementById("errorMessage").style.display = "block";
+                document.getElementById("errorMessage").textContent = "Please enter username and password.";
+                return; // Exit function
+            }
+
+            // Check if login attempts exceed 3
+            if (loginAttempts > 2) {
+                // Display message to contact government information systems unit
+                alert("You have exceeded the maximum number of login attempts. Please contact the government information systems unit.");
+                return; // Exit function
+            }
+
+            // Retrieve saved username and password from registration.html (assuming it's stored in localStorage)
+            var savedUsername = localStorage.getItem("username");
+            var savedPassword = localStorage.getItem("password");
+
+            // Check if the entered username and password match the saved ones
+            if (username === savedUsername && password === savedPassword) {
+                // If matched, redirect to menu.html
+                window.location.href = "home.html";
+            } else {
+                // If not matched, display error message
+                document.getElementById("errorMessage").style.display = "block";
+                document.getElementById("errorMessage").textContent = "Incorrect username or password.";
+            }
+        }
+    </script>
+
+</body>
+</html>

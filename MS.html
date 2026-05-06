@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Customization Page</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+ 
+<style>
+  body {
+    background-color: #2196F3; /* blue */
+    color: #FFFFFF; /* white */
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #000000; /* black */
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000; /* black */
+    color: #FFFFFF; /* white */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555555; /* darker gray */
+}
+
+.dropdowns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+</style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <section id="topbar" class="topbar d-flex align-items-center">
+    
+  </section><!-- End Top Bar -->
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="home.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Walamoo Tax<span>.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="customization.html">Customized Settings</a></li>
+            
+              <li><a href="QueryWireframe2.html">Enter a Query</a></li>
+              
+          <li class="dropdown"><a href="#">More<i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="MS.html">Monthly Scenarios</a></li>
+              <li><a href="Threshold2.html">Thresholds Settings</a></li>
+              <li><a href="HelpCenter.html">Help Center</a></li>
+			        <li><a href="login.html">Log out</a></li>
+
+        </ul>
+      </nav>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      
+      <nav>
+        <div class="container">
+          <ol>
+            <li><a href="home.html">Home</a></li>
+            <li>Monthly Tax Scenario</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Breadcrumbs -->
+
+    <section class="sample-page">
+      <div class="container" data-aos="fade-up">
+<div class="dropdowns">
+  <label for="month">Select Month:</label>
+  <input type="month" id="month" name="month">
+</div>
+
+<div class="dropdowns">
+  <label for="company">Select Company:</label>
+  <select id="company">
+    <option value="Food Fashion Inc">Food Fashion Inc</option>
+    <option value="Who Wants Dairy Inc">Who Wants Dairy Inc</option>
+    <option value="Walamoo Inc">Walamoo Inc</option>
+  </select>
+</div>
+
+<button id="checkTaxesButton">Check Taxes</button>
+
+<script>
+  document.getElementById('checkTaxesButton').addEventListener('click', function() {
+    // Get selected month
+    const selectedMonth = document.getElementById('month').value;
+    
+    // Get selected company
+    const selectedCompany = document.getElementById('company').value;
+    
+    // Simulate checking minimum tax payment
+    const isMinimumTaxPaid = checkMinimumTax(selectedCompany, selectedMonth);
+    
+    // Display alert based on minimum tax payment status
+    if (isMinimumTaxPaid) {
+        alert(`Taxes for ${selectedCompany} in ${selectedMonth} have been paid.`);
+    } else {
+        alert(`Taxes for ${selectedCompany} in ${selectedMonth} have not been paid.`);
+    }
+});
+
+// Function to check if minimum tax has been paid
+function checkMinimumTax(company, month) {
+    // Dummy data for demonstration purposes
+    const minimumTaxPaid = {
+        "Food Fashion Inc": {
+            '2024-01': false,
+            '2024-02': true,
+            '2024-03': true,
+            '2024-04': true,
+            '2024-05': false,
+            '2024-06': true,
+            '2024-07': true,
+            '2024-08': true,
+            '2024-09': true,
+            '2024-10': true,
+            '2024-11': true,
+            '2024-12': true
+        },
+        "Who Wants Dairy Inc": {
+            '2024-01': false,
+            '2024-02': false,
+            '2024-03': true,
+            '2024-04': false,
+            '2024-05': false,
+            '2024-06': true,
+            '2024-07': true,
+            '2024-08': true,
+            '2024-09': true,
+            '2024-10': true,
+            '2024-11': true,
+            '2024-12': true
+        },
+        "Walamoo Inc": {
+            '2024-01': true,
+            '2024-02': true,
+            '2024-03': true,
+            '2024-04': true,
+            '2024-05': true,
+            '2024-06': true,
+            '2024-07': true,
+            '2024-08': true,
+            '2024-09': true,
+            '2024-10': true,
+            '2024-11': true,
+            '2024-12': true
+        }
+    };
+
+    // Check if minimum tax has been paid for the selected company and month
+    return minimumTaxPaid[company][month];
+}
+</script>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Reconciliation Page</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+ 
+<style>
+body {
+    background-color: #2196F3; /* blue */
+    color: #FFFFFF; /* white */
+    font-family: Arial, sans-serif;
+  }
+  h1 {
+    color: #000000; /* black */
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFFFFF; /* white */
+  }
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFFFFF; /* white */
+  }
+  button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000; /* black */
+    color: #FFFFFF; /* white */
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #555555; /* darker gray */
+  }
+  #result {
+    margin-top: 20px;
+  }
+</style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <section id="topbar" class="topbar d-flex align-items-center">
+    
+  </section><!-- End Top Bar -->
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="home.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Walamoo Tax<span>.</span></h1>
+      </a>
+     <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="customization.html">Customized Settings</a></li>
+          <li><a href="QueryWireframe2.html">Enter a Query</a></li>
+          <li class="dropdown"><a href="#">More<i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="MS.html">Monthly Scenarios</a></li>
+              <li><a href="Threshold2.html">Thresholds Settings</a></li>
+              <li><a href="home.html">Walamoo Tax</a></li>
+		          <li><a href="Login.html">Log Out</a></li>
+            </ul>
+        </ul>
+      </nav><!-- .navbar -->
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center" style="background-image: url('');">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+          </div>
+        </div>
+      </div> 
+      <nav>
+        <div class="container">
+          <ol>
+           <li><a href="home.html">Home</a></li>
+			<li>Reconciliation</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Breadcrumbs -->
+
+    <section class="sample-page">
+      <div class="container" data-aos="fade-up">
+<h1>Reconciliation Page</h1>
+
+<form id="reconciliationForm">
+  <label for="selectedCompany">Select Company:</label>
+  <select id="selectedCompany" name="selectedCompany" required>
+    <option value="">Select a Company</option>
+    <option value="Company A">Walamoo Inc</option>
+    <option value="Company B">Company Inc</option>
+    <option value="Company C">Food Fashion Inc</option>
+    <option value="Company D">Company D</option>
+    <option value="Company E">Company E</option>
+    <option value="Company F">Company F</option>
+    <option value="Company G">Company G</option>
+    <option value="Company H">Company H</option>
+    <option value="Company I">Company I</option>
+    <option value="Company J">Company J</option>
+  </select>
+  <label for="totalDeposits">Total Value Deposited:</label>
+  <input type="number" id="totalDeposits" name="totalDeposits" required>
+  <button type="submit">Calculate</button>
+</form>
+
+<div id="result"></div>
+<div class="back-button">
+           
+            <a href="home.html">Back to Home</a>
+        </div>
+<a href="HelpCenter.html" class="help-link">Help?</a>
+<script>
+document.getElementById("reconciliationForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var selectedCompany = document.getElementById("selectedCompany").value;
+    var totalDeposits = parseFloat(document.getElementById("totalDeposits").value);
+    
+    // Dummy data
+    var companiesData = {
+      "Company A": 500,
+      "Company B": 800,
+      "Company C": 300,
+      "Company D": 1200,
+      "Company E": 600,
+      "Company F": 400,
+      "Company G": 1000,
+      "Company H": 700,
+      "Company I": 900,
+      "Company J": 1100
+    };
+
+    var totalTaxesPaid = companiesData[selectedCompany];
+    var difference = totalTaxesPaid - totalDeposits;
+
+    var result = document.getElementById("result");
+    result.innerHTML = "";
+
+    if (isNaN(totalTaxesPaid)) {
+      result.innerHTML = "<p>Please select a valid company.</p>";
+    } else {
+      if (difference === 0) {
+        result.innerHTML = "<p>No difference found. Reconciliation successful!</p>";
+      } else {
+        result.innerHTML = "<p>Difference found: " + difference.toFixed(2) + "</p>";
+      }
+    }
+  });
+</script>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

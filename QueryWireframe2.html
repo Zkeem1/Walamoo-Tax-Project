@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Query Page</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Impact
+  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="home.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Walamoo Tax<span>.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="customization.html">Customized Settings</a></li>
+          <li><a href="MS.html">Monthly Scenarios</a></li>
+          <li><a href="Threshold2.html">Thresholds Settings</a></li>
+          <li class="dropdown"><a href="#">More<i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <ul>
+		      <li><a href="HelpCenter.html">Help Center</a></li>
+		      <li><a href="Login.html">Log Out</a></li>
+          </ul>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center" style="background-image: url('');">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div class="container">
+          <ol>
+            <li><a href="home.html">Home</a></li>
+            <li>Query Page</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Breadcrumbs -->
+
+    <section class="sample-page">
+      <div class="container" data-aos="fade-up">
+
+<style>
+  body {
+    background-color: #2196F3; /* blue */
+    color: #FFFFFF; /* white */
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: #000000; /* black */
+  }
+  
+  input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000; /* black */
+    color: #FFFFFF; /* white */
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555555; /* darker gray */
+  }
+  
+  .dropdowns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Enter Query:</h1>
+<input type="text" id="queryInput" placeholder="Enter your query here...">
+
+<div class="dropdowns">
+  <label for="language">Language:</label>
+  <select id="language">
+    <option value="english">English</option>
+    <option value="dfl">DFL</option>
+  </select>
+  
+  <label for="queryType">Query Type:</label>
+  <select id="queryType">
+    <option value="adHoc">Ad Hoc</option>
+    <option value="guided">Guided</option>
+  </select>
+</div>
+
+<button id="executeOverwriteBtn">Execute Overwrite</button>
+<button id="executeQueryBtn">Execute Query</button>
+<button id="printToFileBtn">Print to Text File</button>
+<a href="HelpCenter.html" class="help-link">Help?</a>
+<p>Query Results:</p>
+<div id="queryResults"></div>
+<div class="back-button">
+          
+            <a href="Home.html">Back to Home</a>
+        </div>
+<script>
+  document.getElementById('executeOverwriteBtn').addEventListener('click', function() {
+    alert('Execute Overwrite button clicked');
+  });
+  
+  document.getElementById('executeQueryBtn').addEventListener('click', function() {
+    executeQuery();
+  });
+  
+  document.getElementById('printToFileBtn').addEventListener('click', function() {
+    printResultsToFile();
+  });
+
+  function executeQuery() {
+    var queryInput = document.getElementById('queryInput').value;
+    var queryType = document.getElementById('queryType').value;
+    var queryResults = document.getElementById('queryResults');
+
+    // Check if DFL language is selected
+    if (document.getElementById('language').value === "dfl") {
+        if (queryType === "adHoc") {
+            // Generate random binary numbers
+            var binaryNumbers = [];
+            for (var i = 0; i < 5; i++) {
+                binaryNumbers.push(Math.floor(Math.random() * 2));
+            }
+            queryResults.innerText = binaryNumbers.join(' ');
+        }
+    } else {
+        // Simulating backend data retrieval and sorting
+        var records = [
+            { companyName: "Company A", companyId: "A123", streetName: "123 Street", city: "City A", country: "Country A", totalTaxesPaid: 1000 },
+            { companyName: "Company B", companyId: "B456", streetName: "456 Street", city: "City B", country: "Country B", totalTaxesPaid: 1500 },
+            { companyName: "Company C", companyId: "C789", streetName: "789 Street", city: "City C", country: "Country C", totalTaxesPaid: 1200 }
+        ];
+        
+        // Sorting records based on query
+        if (queryType === "guided") {
+            if (queryInput.toLowerCase() === "list by company name") {
+                records.sort((a, b) => a.companyName.localeCompare(b.companyName));
+            } else if (queryInput.toLowerCase() === "list by total taxes paid") {
+                records.sort((a, b) => a.totalTaxesPaid - b.totalTaxesPaid);
+            } else if (queryInput.toLowerCase() === "list by country") {
+                records.sort((a, b) => a.country.localeCompare(b.country));
+            }
+        }
+        
+        // Displaying sorted records
+        queryResults.innerHTML = "";
+        records.forEach(function(record) {
+            queryResults.innerHTML += `${record.companyName} ${record.companyId} ${record.streetName} ${record.city} ${record.country} ${record.totalTaxesPaid}<br>`;
+        });
+        
+        // Displaying date, time, and total records
+        var currentDate = new Date().toLocaleDateString();
+        var currentTime = new Date().toLocaleTimeString();
+        var totalRecords = records.length;
+        queryResults.innerHTML += `<br>Date: ${currentDate}<br>Time: ${currentTime}<br>Total Records: ${totalRecords}`;
+    }
+}
+
+function printResultsToFile() {
+    var queryResultsContent = document.getElementById('queryResults').innerText;
+    var blob = new Blob([queryResultsContent], { type: 'text/plain' });
+    var url = URL.createObjectURL(blob);
+    
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'query_results.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+</script>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+     
+
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Walamoo Tax</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/impact-bootstrap-business-website-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

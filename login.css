@@ -1,0 +1,133 @@
+body {
+    background: url('wallpaper.jpg') no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+*{
+    font-family: 'Courier New', Courier, monospace;
+     box-sizing: border-box;
+
+}
+.user-icon {
+    text-align: center; /* Center the image horizontally */
+    margin-bottom: 20px; /* Add margin for spacing */
+}
+
+.user-icon img {
+    width: 100px; /* Adjust the width of the user icon */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/*
+.container {
+    display: flex;
+    width: 50%; /* Form takes up half of the screen 
+    */
+
+form {
+    width: 80%; 
+    max-width: 650px; /* Limit the maximum width of the form */
+    padding: 40px;
+    background: teal;
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2); /* Add box-shadow for a subtle shadow effect */
+    margin: auto;;
+}
+
+/*
+
+form {
+    width: 500px;
+  
+    padding: 40px;
+    background: teal;
+    
+}
+*/
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+    font-size:xx-large;
+}
+
+input {
+    display: block;
+    border: 2px solid #ccc;
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+label {
+    color: black ;
+    font-size: 18px;
+    padding: 10px;
+}
+
+button {
+    float: right;
+    background: #f97613;
+    padding: 10px 15px;
+    color: #ffff;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .6;
+}
+
+.error {
+    background: #9b4848;
+    color: #ffffff;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+.links a {
+    font-size: 13px;
+    margin: 15px;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.register-link a {
+    font-size: 16px;
+    text-decoration: none;
+    
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+   
+}
+
+.register-link p{
+    margin: 15px;
+}
+
+/*
+.image-container {
+    width: 50%; /* Image takes up half of the screen
+     
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+*/

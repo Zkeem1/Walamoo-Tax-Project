@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background: white;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items:center;
+    padding: 10px;
+    
+}
+.container{
+    max-width: 1000px;
+    display: flex;
+    margin: 0 auto;
+    padding: 25px 30px;
+    border-radius: 5px;
+    background: transparent;
+    border: 2px solid teal;
+  
+}
+.image-container {
+    width: 50%; 
+    margin-right: 20px; 
+}
+
+.image-container img {
+    width: 100%; 
+    height: auto; 
+}
+
+.form-container {
+    width: 70%; 
+}
+
+.form-container h2 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px; 
+    font-weight: bold;
+}
+
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+
+}
+form .user-details .input-box{
+   margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box .details{
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+
+
+}
+
+.user-details .input-box input{
+    height: 35px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    
+}
+
+.user-details .button {
+    width: auto; 
+}
+
+form .button input {
+    height: 35px;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 30px; 
+}
+
+.user-details .button-container {
+    width: 100%;
+    display: flex; 
+    justify-content: center; 
+    margin-top: 20px;
+
+}
+.popup-message {
+    display: none;
+    position: fixed;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid teal;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.links a {
+    font-size: 15px;
+    margin: 15px;
+    text-decoration: none;
+}
+.links a:hover {
+    text-decoration: underline;
+}
+/*
+form .button {
+    display: inline-block; 
+    margin-right: 10px; 
+   
+}
+
+form .button input{
+    height: 35px;
+    width: 30%;
+}
+.user-details .button {
+    width: 60%; 
+    margin-top: 15px; 
+    
+}
+
+*/
