@@ -241,3 +241,34 @@ total <attribute>
 
 ### Thresholds
 | Thres<response clipped><NOTE>Result is longer than **10000 characters**, will be **truncated**.</NOTE>
+
+
+## Screenshots
+
+### Tax Information Dashboard
+![Dashboard](screenshots/dashboard.png)
+*Real-time aggregate statistics: 1,000 taxpayer records, $1,000,000 total tax, 50 countries, 200 cities*
+
+### XML Data Upload
+![Upload](screenshots/upload.png)
+*Import taxpayer data from XML files with validation, save controls, and reload capability*
+
+### Ad-Hoc Query Interface
+![Query](screenshots/query.png)
+*Dual-mode query system with language selection, execute options, and text file export*
+
+### Homepage Navigation
+![Homepage](screenshots/homepage.png)
+*Main landing page with quick access to Tax Information Systems, Query Builder, and Reconciliation*
+
+### Navigation Menu
+![Navigation](screenshots/navigation.png)
+*Expanded dropdown revealing Monthly Scenarios, Thresholds Settings, Help Center, and Logout*
+
+### Login Page
+![Login](screenshots/login.png)
+*Secure authentication with accessibility settings and password recovery*
+
+### Registration Form
+![Registration](screenshots/registration.png)
+*Comprehensive taxpayer registration with personal details, location, and tax identification*
